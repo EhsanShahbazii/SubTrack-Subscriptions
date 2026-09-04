@@ -27,8 +27,7 @@
   },
   "categories": [
     "Other",
-    "Visualization",
-    "Productivity"
+    "Visualization"
   ],
   "keywords": [
     "subscription",
@@ -40,7 +39,8 @@
     "ai",
     "quota",
     "hosting",
-    "renewal"
+    "renewal",
+    "productivity"
   ],
   "main": "./dist/extension.js",
   "contributes": {

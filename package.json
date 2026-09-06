@@ -1,0 +1,164 @@
+{
+  "name": "subtrack",
+  "displayName": "SubTrack",
+  "description": "Track recurring subscriptions, software licenses, domain expirations, and AI quotas directly in your VS Code sidebar.",
+  "version": "1.0.0",
+  "publisher": "ehsanshahbazi",
+  "author": {
+    "name": "Ehsan Shahbazi",
+    "url": "https://github.com/EhsanShahbazii"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/EhsanShahbazii/SubTrack-Subscriptions#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EhsanShahbazii/SubTrack-Subscriptions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EhsanShahbazii/SubTrack-Subscriptions/issues"
+  },
+  "icon": "assets/icon.png",
+  "galleryBanner": {
+    "color": "#18181b",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Visualization",
+    "Productivity"
+  ],
+  "keywords": [
+    "subscription",
+    "tracker",
+    "expiry",
+    "license",
+    "countdown",
+    "timer",
+    "ai",
+    "quota",
+    "hosting",
+    "renewal"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "subtrack-container",
+          "title": "SubTrack",
+          "icon": "$(calendar)"
+        }
+      ]
+    },
+    "views": {
+      "subtrack-container": [
+        {
+          "id": "subtrack.subscriptionsView",
+          "name": "Subscription Tracker",
+          "icon": "$(calendar)",
+          "visibility": "visible"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "subtrack.addSubscription",
+        "title": "Add Subscription",
+        "category": "SubTrack",
+        "icon": "$(plus)"
+      },
+      {
+        "command": "subtrack.refresh",
+        "title": "Refresh List",
+        "category": "SubTrack",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "subtrack.editSubscription",
+        "title": "Edit Subscription",
+        "category": "SubTrack",
+        "icon": "$(edit)"
+      },
+      {
+        "command": "subtrack.deleteSubscription",
+        "title": "Delete Subscription",
+        "category": "SubTrack",
+        "icon": "$(trash)"
+      },
+      {
+        "command": "subtrack.seedSampleData",
+        "title": "Load Sample Subscriptions",
+        "category": "SubTrack",
+        "icon": "$(cloud-download)"
+      },
+      {
+        "command": "subtrack.clearAll",
+        "title": "Clear All Subscriptions",
+        "category": "SubTrack"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "subtrack.addSubscription",
+          "when": "view == subtrack.subscriptionsView",
+          "group": "navigation@1"
+        },
+        {
+          "command": "subtrack.refresh",
+          "when": "view == subtrack.subscriptionsView",
+          "group": "navigation@2"
+        },
+        {
+          "command": "subtrack.seedSampleData",
+          "when": "view == subtrack.subscriptionsView",
+          "group": "1_actions@1"
+        },
+        {
+          "command": "subtrack.clearAll",
+          "when": "view == subtrack.subscriptionsView",
+          "group": "1_actions@2"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "subtrack.editSubscription",
+          "when": "view == subtrack.subscriptionsView && viewItem == subscriptionItem",
+          "group": "inline@1"
+        },
+        {
+          "command": "subtrack.deleteSubscription",
+          "when": "view == subtrack.subscriptionsView && viewItem == subscriptionItem",
+          "group": "inline@2"
+        },
+        {
+          "command": "subtrack.editSubscription",
+          "when": "view == subtrack.subscriptionsView && viewItem == subscriptionItem",
+          "group": "1_manage@1"
+        },
+        {
+          "command": "subtrack.deleteSubscription",
+          "when": "view == subtrack.subscriptionsView && viewItem == subscriptionItem",
+          "group": "1_manage@2"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "build": "esbuild ./src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node --sourcemap",
+    "package": "esbuild ./src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node --minify",
+    "test": "npx esbuild test/unit.test.ts --bundle --platform=node | node"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.20.0",
+    "typescript": "^5.3.3"
+  }
+}

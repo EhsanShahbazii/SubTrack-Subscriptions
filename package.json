@@ -1,6 +1,6 @@
 {
-  "name": "subtrack",
-  "displayName": "SubTrack",
+  "name": "subtrack-subscriptions",
+  "displayName": "SubTrack: Subscriptions",
   "description": "Track recurring subscriptions, software licenses, domain expirations, and AI quotas directly in your VS Code sidebar.",
   "version": "1.0.0",
   "publisher": "ehsanshahbazi",

@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=ehsanshahbazi.subtrack"><img src="https://img.shields.io/visual-studio-marketplace/v/ehsanshahbazi.subtrack.svg?color=007acc&label=VS%20Code%20Marketplace" alt="Marketplace Version"></a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=ehsanshahbazi.subtrack"><img src="https://img.shields.io/visual-studio-marketplace/i/ehsanshahbazi.subtrack.svg?color=22c55e" alt="Installs"></a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=ehsanshahbazi.subtrack-subscriptions"><img src="https://img.shields.io/visual-studio-marketplace/v/ehsanshahbazi.subtrack-subscriptions.svg?color=007acc&label=VS%20Code%20Marketplace" alt="Marketplace Version"></a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=ehsanshahbazi.subtrack-subscriptions"><img src="https://img.shields.io/visual-studio-marketplace/i/ehsanshahbazi.subtrack-subscriptions.svg?color=22c55e" alt="Installs"></a>
   <a href="https://github.com/EhsanShahbazii/SubTrack-Subscriptions/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
   <a href="https://github.com/EhsanShahbazii/SubTrack-Subscriptions"><img src="https://img.shields.io/badge/GitHub-EhsanShahbazii%2FSubTrack--Subscriptions-181717?logo=github" alt="GitHub Repository"></a>
 </p>
